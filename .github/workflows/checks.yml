@@ -3,15 +3,9 @@ name: Checks
 on: [push]
 
 jobs:
-  print-docker-user:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Print Docker User
-        run: echo "DOCKER_USER: ${{ secrets.DOCKER_USER }}"
   test-lint:
     name: Test run Lint
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
 
     steps:
       - name: Login to Docker Hub
